@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Full Friends</title>
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+	{% for message in messages %}
+		<p>{{message}}<p>
+	{% endfor %}
+{% endwith %}
+
+	<h1>Enter your name and email</h1>
+	<form action="/friends" method="GET">
+		<input type="submit" name="add" value="Add">
+	</form>
+	<ul>
+		{% for friend in friends %}
+		<li>{{ friend['name'] }} {{ friend['email'] }}<form action="/show/{{friend['id']}}" method="GET"><input type="submit" name="show" value="Show"></form></li>
+		{% endfor %}
+	</ul>
+
+
+		
+</body>
+</html>

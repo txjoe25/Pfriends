@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form action="/friends/{{ friendinfo[0]['id'] }}/edit" method="POST">
+	<input type="text" name="name" value="{{ friendinfo[0]['name'] }}">
+	<input type="text" name="email" value="{{ friendinfo[0]['email'] }}">
+	<input type="submit" name="update" value="Update"></form>
+
+</body>
+</html>

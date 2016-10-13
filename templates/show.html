@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Full</title>
+</head>
+<body>
+
+	Name: {{ friendinfo[0]['name'] }}
+	<hr>
+	Email: {{ friendinfo[0]['email'] }}
+	<hr>
+	Created at: {{ friendinfo[0]['created_at'] }}
+	<hr>
+	Updated at: {{ friendinfo[0]['updated_at'] }}
+	<hr>
+	<form action="/friends/{{friendinfo[0]['id']}}/edit" method="GET"><input type="submit" name="update" value="Update"></form>
+
+	<form action="/friends/{{friendinfo[0]['id']}}/delete" method="GET"><input type="submit" name="delete" value="Delete"></form>
+
+</body>
+</html>
